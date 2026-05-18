@@ -15,7 +15,7 @@ import vista.JFReserva;
  *
  * @author roca
  */
-public class HotelDeMascotas {
+public class HotelMascotas {
 
     /**
      * @param args the command line arguments

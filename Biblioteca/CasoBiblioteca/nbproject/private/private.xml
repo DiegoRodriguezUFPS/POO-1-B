@@ -2,17 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/roca/Documents/POO/Biblioteca/CasoBiblioteca/src/vista/JFDevolucion.java</file>
-            <file>file:/C:/Users/roca/Documents/POO/Biblioteca/CasoBiblioteca/src/controlador/CntrlDevolucion.java</file>
-            <file>file:/C:/Users/roca/Documents/POO/Biblioteca/CasoBiblioteca/src/modelo/Prestamo.java</file>
-            <file>file:/C:/Users/roca/Documents/POO/Biblioteca/CasoBiblioteca/src/modelo/Libro.java</file>
-            <file>file:/C:/Users/roca/Documents/POO/Biblioteca/CasoBiblioteca/src/controlador/CntrlPrestamo.java</file>
-            <file>file:/C:/Users/roca/Documents/POO/Biblioteca/CasoBiblioteca/src/casobiblioteca/CasoBiblioteca.java</file>
-            <file>file:/C:/Users/roca/Documents/POO/Biblioteca/CasoBiblioteca/src/controlador/CntrlUsuario.java</file>
-            <file>file:/C:/Users/roca/Documents/POO/Biblioteca/CasoBiblioteca/src/vista/JFPrestamo.java</file>
-            <file>file:/C:/Users/roca/Documents/POO/Biblioteca/CasoBiblioteca/src/modelo/TipoLibro.java</file>
-            <file>file:/C:/Users/roca/Documents/POO/Biblioteca/CasoBiblioteca/src/modelo/Usuario.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

@@ -30,9 +30,7 @@ public class CntrlCaperucita implements ActionListener{
         this.frmCaperucita.btnArriba.setEnabled(false);
         this.frmCaperucita.btnizquierda.setEnabled(false);
     }
-    
-    public void mover derecha;
-    
+        
     
 
     
