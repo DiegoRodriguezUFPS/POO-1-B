@@ -1,0 +1,11 @@
+build/
+dist/
+
+*.class
+*.jar
+*.ser
+
+**/nbproject/private/
+**/nbproject/private/*
+
+*.zip
