@@ -6,7 +6,9 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import modelo.Libro;
 import modelo.Prestamo;
 import modelo.Usuario;
@@ -50,7 +52,7 @@ public class CntrlPrestamo implements ActionListener {
                 frmPrestamo.comBLibro.addItem(libro);
             }
         }
-        
+
     }
 
     public void refrescarListaUsuario() {
@@ -66,63 +68,78 @@ public class CntrlPrestamo implements ActionListener {
 
     public void guardarPrestamo() {
         Usuario usuarioTM = (Usuario) frmPrestamo.comUsuario.getSelectedItem();
-        Libro libroTM = (Libro) frmPrestamo.comBLibro.getSelectedItem();
-        boolean yaPrestamo = false;
-        for (Prestamo prestamo : listaPrestamo) {
-            if (prestamo.getUsuario().equals(usuarioTM) && prestamo.getLibro().equals(libroTM)) {
-                yaPrestamo = true;
-                break;
-            }
-        }
+        if (usuarioTM != null) {
+            if (!usuarioTM.isEsVetado()) {
+                Libro libroTM = (Libro) frmPrestamo.comBLibro.getSelectedItem();
+                boolean yaPrestamo = false;
+                for (Prestamo prestamo : listaPrestamo) {
+                    if (prestamo.getUsuario().equals(usuarioTM) && prestamo.getLibro().equals(libroTM)) {
+                        yaPrestamo = true;
+                        break;
+                    }
+                }
 
-        if (yaPrestamo) {
-            frmPrestamo.txtAMostrar.setText("El usuario ya realizó un prestrámo de este Libro.");
-        } else {
-            if (libroTM.getCanCopiasHay() == 0) {
-                frmPrestamo.txtAMostrar.setText("Ya no hay copias de este libro.");
+                if (yaPrestamo) {
+                    frmPrestamo.txtAMostrar.setText("El usuario ya realizó un prestrámo de este Libro.");
+                } else {
+                    if (libroTM.getCanCopiasHay() == 0) {
+                        frmPrestamo.txtAMostrar.setText("Ya no hay copias de este libro.");
+                    } else {
+                        if (frmPrestamo.jDateFechaIngreso.getDate() == null) {
+                            frmPrestamo.txtAMostrar.setText("Porfavor, ingrese una fecha.");
+                        } else {
+                            libroTM.setCanCopiasHay(libroTM.getCanCopiasHay() - 1);
+                            Date fechaDate = frmPrestamo.jDateFechaIngreso.getDate();
+                            LocalDate fechaIngreso = fechaDate.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDate();
+                            idPrestamos++;
+                            String idPrestamoTM = Integer.toString(idPrestamos);
+                            switch (idPrestamoTM.length()) {
+                                case 1:
+                                    idPrestamoTM = "000" + idPrestamoTM;
+                                    break;
+                                case 2:
+                                    idPrestamoTM = "00" + idPrestamoTM;
+                                    break;
+                                case 3:
+                                    idPrestamoTM = "0" + idPrestamoTM;
+                                    break;
+                                default:
+                                    throw new AssertionError();
+                            }
+                            Prestamo prestamoTM = new Prestamo(idPrestamoTM, usuarioTM, libroTM, fechaIngreso);
+                            switch (usuarioTM.getTipoUsuario()) {
+                                case ADMINISTRATIVO:
+                                    prestamoTM.setFechaDebeDevolver(prestamoTM.getFechaPrestramo().plusDays(3));
+                                    break;
+                                case PROFESOR:
+                                    prestamoTM.setFechaDebeDevolver(prestamoTM.getFechaPrestramo().plusDays(15));
+                                    break;
+                                case ESTUDIANTE:
+                                    prestamoTM.setFechaDebeDevolver(prestamoTM.getFechaPrestramo().plusDays(15));
+                                    break;
+                                default:
+                                    throw new AssertionError();
+                            }
+                            listaPrestamo.add(prestamoTM);
+                            refrescarListaLibros();
+
+                            frmPrestamo.txtAMostrar.setText(""
+                                    + "¡Se ha realizado un préstamo! \n"
+                                    + "Información del préstamo: \n"
+                                    + "Codigo: " + prestamoTM.getId() + "\n"
+                                    + "Usuario: " + usuarioTM + "\n"
+                                    + "Libro: '" + libroTM.getTitulo() + "' escrito por " + libroTM.getAutor() + "\n"
+                                    + "Fecha de préstamo: " + prestamoTM.getFechaPrestramo().toString() + "\n"
+                                    + "Fecha máxima que debe ser devuelto el libro: " + prestamoTM.getFechaDebeDevolver().toString() + "\n");
+                        }
+                    }
+                }
             } else {
-                libroTM.setCanCopiasHay(libroTM.getCanCopiasHay() - 1);
-                idPrestamos++;
-                String idPrestamoTM = Integer.toString(idPrestamos);
-                switch (idPrestamoTM.length()) {
-                    case 1:
-                        idPrestamoTM = "000" + idPrestamoTM;
-                        break;
-                    case 2:
-                        idPrestamoTM = "00" + idPrestamoTM;
-                        break;
-                    case 3:
-                        idPrestamoTM = "0" + idPrestamoTM;
-                        break;
-                    default:
-                        throw new AssertionError();
-                }
-                Prestamo prestamoTM = new Prestamo(idPrestamoTM, usuarioTM, libroTM);
-                switch (usuarioTM.getTipoUsuario()) {
-                    case ADMINISTRATIVO:
-                        prestamoTM.setFechaDebeDevolver(prestamoTM.getFechaPrestramo().plusDays(3));
-                        break;
-                    case PROFESOR:
-                        prestamoTM.setFechaDebeDevolver(prestamoTM.getFechaPrestramo().plusDays(15));
-                        break;
-                    case ESTUDIANTE:
-                        prestamoTM.setFechaDebeDevolver(prestamoTM.getFechaPrestramo().plusDays(15));
-                        break;
-                    default:
-                        throw new AssertionError();
-                }
-                listaPrestamo.add(prestamoTM);
-                refrescarListaLibros();
-
-                frmPrestamo.txtAMostrar.setText(""
-                        + "¡Se ha realizado un préstamo! \n"
-                        + "Información del préstamo: \n"
-                        + "Codigo: " + prestamoTM.getId() + "\n"
-                        + "Usuario: " + usuarioTM.getNombre() + " (" + usuarioTM.getId() + ") \n"
-                        + "Libro: '" + libroTM.getTitulo() + "' escrito por " + libroTM.getAutor() + "\n"
-                        + "Fecha de préstamo: " + prestamoTM.getFechaPrestramo().toString() + "\n"
-                        + "Fecha máxima que debe ser devuelto el libro: " + prestamoTM.getFechaDebeDevolver().toString() + "\n");
+                frmPrestamo.txtAMostrar.setText(usuarioTM + " está VETADO del sistema de préstamo de libros. Porque no realizó una devolución a su respectivo tiempo.");
             }
+
+        } else {
+            frmPrestamo.txtAMostrar.setText("Escoja un usuario, porfavor.");
         }
     }
 

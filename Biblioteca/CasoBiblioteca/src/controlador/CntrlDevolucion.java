@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import modelo.Libro;
 import modelo.Prestamo;
 import modelo.Usuario;
@@ -59,43 +60,47 @@ public class CntrlDevolucion implements ActionListener {
     }
 
     public void devolver() {
-        if (!haHechoPrestramo) {
-            frmDevolucion.txtAResultado.setText("Este Usuario nunca ha hecho un préstamo.");
+        Usuario usuarioTM = (Usuario) frmDevolucion.comBUsuario.getSelectedItem();
+        if (usuarioTM == null) {
+            frmDevolucion.txtAResultado.setText("Escoja un usuario, porfavor.");
         } else {
-            if (frmDevolucion.txtAnio.getText().trim().equals("") || frmDevolucion.txtmes.getText().trim().equals("") || frmDevolucion.txtdia.getText().trim().equals("")) {
-                frmDevolucion.txtAResultado.setText("Rellene todos los datos, porfavor.");
+            if (!haHechoPrestramo) {
+                frmDevolucion.txtAResultado.setText("Este Usuario nunca ha hecho un préstamo.");
             } else {
-                double multa = 0;
-                Usuario usuarioTM = (Usuario) frmDevolucion.comBUsuario.getSelectedItem();
-                Libro libroTM = (Libro) frmDevolucion.comBLibroDevolver.getSelectedItem();
+                Date fechaDate = frmDevolucion.jDateFechaD.getDate();
+                if (fechaDate == null) {
+                    frmDevolucion.txtAResultado.setText("No ha ingresado una fecha. Porfavor, hágalo.");
+                } else {
+                    double multa = 0;
+                    Libro libroTM = (Libro) frmDevolucion.comBLibroDevolver.getSelectedItem();
+                    LocalDate fechaDevolucion = fechaDate.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDate();
 
-                int anio = Integer.parseInt(frmDevolucion.txtAnio.getText());
-                int mes = Integer.parseInt(frmDevolucion.txtmes.getText());
-                int dia = Integer.parseInt(frmDevolucion.txtdia.getText());
+                    for (Prestamo prestamo : listaPrestamo) {
+                        if (prestamo.getUsuario().equals(usuarioTM) && prestamo.getLibro().equals(libroTM)) {
+                            multa = prestamo.calcularMulta(fechaDevolucion);
+                            prestamo.getLibro().setCanCopiasHay(prestamo.getLibro().getCanCopiasHay() + 1);
 
-                LocalDate fechaDevolucion = LocalDate.of(anio, mes, dia);
-
-                for (Prestamo prestamo : listaPrestamo) {
-                    if (prestamo.getUsuario().equals(usuarioTM) && prestamo.getLibro().equals(libroTM)) {
-                        prestamo.setFechaDevolucion(fechaDevolucion);
-                        multa = prestamo.calcularMulta();
-                        prestamo.getLibro().setCanCopiasHay(prestamo.getLibro().getCanCopiasHay() + 1);
-
-                        if (multa == 0) {
-                            frmDevolucion.txtAResultado.setText(""
-                                    + "¡Buenas noticias, " + usuarioTM.getNombre() + "!\n"
-                                    + "¡Se ha devuelto '" + libroTM.getTitulo() + "' con éxito!");
-                        } else {
-                            frmDevolucion.txtAResultado.setText(""
-                                    + "¡Malas noticias, " + usuarioTM.getNombre() + "!\n"
-                                    + "Se ha entegrado '" + libroTM.getTitulo() + "' después de la fecha acordada\n"
-                                    + "Por lo tanto debe pagar una multa de: " + multa);
+                            if (multa == -1) {
+                                frmDevolucion.txtAResultado.setText("La fecha que se escogió es anterior a la fecha del Prestamo (" + prestamo.getFechaPrestramo().toString() + ")");
+                            } else if (multa == 0) {
+                                frmDevolucion.txtAResultado.setText(""
+                                        + "¡Buenas noticias, " + usuarioTM.getNombre() + "!\n"
+                                        + "¡Se ha devuelto '" + libroTM.getTitulo() + "' con éxito!");
+                                listaPrestamo.remove(prestamo);
+                                mostrarLibro();
+                                cntrlPrestamo.refrescarListaLibros();
+                            } else {
+                                frmDevolucion.txtAResultado.setText(""
+                                        + "¡Malas noticias, " + usuarioTM.getNombre() + "!\n"
+                                        + "Se ha entegrado '" + libroTM.getTitulo() + "' después de la fecha acordada\n"
+                                        + "Por lo tanto debe pagar una multa de: " + multa);
+                                prestamo.getUsuario().setEsVetado(true);
+                                listaPrestamo.remove(prestamo);
+                                mostrarLibro();
+                                cntrlPrestamo.refrescarListaLibros();
+                            }
+                            break;
                         }
-
-                        listaPrestamo.remove(prestamo);
-                        mostrarLibro();
-                        cntrlPrestamo.refrescarListaLibros();
-                        break;
                     }
                 }
             }

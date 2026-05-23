@@ -15,7 +15,6 @@ public class Prestamo {
     private String id;
     private LocalDate fechaPrestramo;
     private LocalDate fechaDebeDevolver;
-    private LocalDate fechaDevolucion;
     private Usuario usuario;
     private Libro libro;
     private EstadoPrestamo estadoPrestamo;
@@ -23,12 +22,12 @@ public class Prestamo {
     public Prestamo() {
     }
 
-    public Prestamo(String id, Usuario usuario, Libro libro) {
+    public Prestamo(String id, Usuario usuario, Libro libro, LocalDate fechaPrestramo) {
         this.id = id;
         this.usuario = usuario;
         this.libro = libro;
         this.estadoPrestamo = EstadoPrestamo.PRESTADO;
-        this.fechaPrestramo = LocalDate.now();
+        this.fechaPrestramo = fechaPrestramo;
     }
 
     public String getId() {
@@ -54,15 +53,7 @@ public class Prestamo {
     public void setFechaDebeDevolver(LocalDate fechaDebeDevolver) {
         this.fechaDebeDevolver = fechaDebeDevolver;
     }
-
-    public LocalDate getFechaDevolucion() {
-        return fechaDevolucion;
-    }
-
-    public void setFechaDevolucion(LocalDate fechaDevolucion) {
-        this.fechaDevolucion = fechaDevolucion;
-    }
-
+    
     public Usuario getUsuario() {
         return usuario;
     }
@@ -89,12 +80,15 @@ public class Prestamo {
     
     
     
-    public double calcularMulta(){
+    public double calcularMulta(LocalDate fechaDevolucion){
         double multa = 0;
         if (fechaDevolucion.isAfter(fechaDebeDevolver)) {
-            multa = 50000;
+            multa = 5000;
             long diasentre = ChronoUnit.DAYS.between(fechaDebeDevolver, fechaDevolucion);
             multa *= diasentre;
+        }
+        if (fechaDevolucion.isBefore(fechaPrestramo)) {
+            multa = -1;
         }
         return multa;
     }

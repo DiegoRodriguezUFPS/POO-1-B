@@ -12,6 +12,7 @@ public class Usuario {
     private String id;
     private String nombre;
     private TipoUsuario tipoUsuario;
+    private boolean esVetado;
 
     public Usuario() {
     }
@@ -20,6 +21,7 @@ public class Usuario {
         this.id = id;
         this.nombre = nombre;
         this.tipoUsuario = tipoUsuario;
+        this.esVetado = false;
     }
 
     public String getId() {
@@ -46,9 +48,17 @@ public class Usuario {
         this.tipoUsuario = tipoUsuario;
     }
 
+    public boolean isEsVetado() {
+        return esVetado;
+    }
+
+    public void setEsVetado(boolean esVetado) {
+        this.esVetado = esVetado;
+    }
+    
     @Override
     public String toString() {
-        return "(" + id + ") " + nombre; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        return nombre + " (" + id + ") "; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
     
     
