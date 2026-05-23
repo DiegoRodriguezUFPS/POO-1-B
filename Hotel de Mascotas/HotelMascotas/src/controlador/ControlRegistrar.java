@@ -81,7 +81,7 @@ public class ControlRegistrar implements ActionListener {
         tiempo.setRepeats(false);
 
         String nombre = frmRegistrar.txtNombreMascota.getText();
-        String raza = frmRegistrar.txtRazaMascota.getText();
+        String raza = (String) frmRegistrar.comBRaza.getSelectedItem();
         String edad = frmRegistrar.txtEdadMascota.getText();
         String necesidadEs = frmRegistrar.txtNecesidadesEsP.getText();
         Duenio duenioTM = (Duenio) frmRegistrar.comBDuenio.getSelectedItem();

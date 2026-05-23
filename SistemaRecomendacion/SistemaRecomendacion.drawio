@@ -1,77 +1,56 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Página-1" id="FhI2W-9d_gpE_GXiQBIz">
-    <mxGraphModel dx="2453" dy="1432" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2216" dy="1319" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="mK63LABdQIUOHuwPP6Pl-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Pelicula" vertex="1">
-          <mxGeometry height="250" width="210" x="210" y="200" as="geometry" />
+          <mxGeometry height="300" width="280" x="210" y="184" as="geometry" />
         </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-2" parent="mK63LABdQIUOHuwPP6Pl-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp; titulo: String&lt;div&gt;- genero: String&lt;/div&gt;&lt;div&gt;- duracion: String&lt;/div&gt;&lt;div&gt;- comentarios: Comentario&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="74" width="210" y="26" as="geometry" />
+        <mxCell id="mK63LABdQIUOHuwPP6Pl-2" parent="mK63LABdQIUOHuwPP6Pl-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-&amp;nbsp; titulo: String&lt;div&gt;- genero: String&lt;/div&gt;&lt;div&gt;- año: int&lt;/div&gt;&lt;div&gt;- director: String&lt;/div&gt;&lt;div&gt;- clasificacionPromedio: double&lt;/div&gt;&lt;div&gt;- duracion: String&lt;/div&gt;&lt;div&gt;- comentarios: Comentario [0..*]&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="280" y="26" as="geometry" />
         </mxCell>
         <mxCell id="mK63LABdQIUOHuwPP6Pl-3" parent="mK63LABdQIUOHuwPP6Pl-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
-          <mxGeometry height="8" width="210" y="100" as="geometry" />
+          <mxGeometry height="8" width="280" y="130" as="geometry" />
         </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-4" parent="mK63LABdQIUOHuwPP6Pl-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ Pelicula(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;titulo: String,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;genero: String,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;duracion: String&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ getTitulo(): String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ setTitulo(String): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;+ getComentarios(): Comentario&lt;/div&gt;&lt;div&gt;+ agregarComentario(comentario: Comentario): void&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ getCalificacionPromedio(): double&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="142" width="210" y="108" as="geometry" />
+        <mxCell id="mK63LABdQIUOHuwPP6Pl-4" parent="mK63LABdQIUOHuwPP6Pl-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ Pelicula(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;titulo: String,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;genero: String, año:&amp;nbsp;&lt;/span&gt;int&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, director: String, clasificacionPromedio: double,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;duracion: String&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ getTitulo(): String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ setTitulo(String): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;+ getDuracion():&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ setDuracion(String): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ agregarComentario(comentario: Comentario): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="162" width="280" y="138" as="geometry" />
         </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="SistemaRecomendador" vertex="1">
-          <mxGeometry height="260" width="240" x="40" y="560" as="geometry" />
+        <mxCell id="mK63LABdQIUOHuwPP6Pl-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Recomendador" vertex="1">
+          <mxGeometry height="260" width="240" x="40" y="550" as="geometry" />
         </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-6" parent="mK63LABdQIUOHuwPP6Pl-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ usuario: Usuario&lt;/div&gt;&lt;div&gt;+ pelicula: Pelicula&lt;/div&gt;+ tipoAlgoritmo: TipoAlgoritmo&lt;div&gt;+ tipoBusqueda: TipoBusqueda&lt;/div&gt;" vertex="1">
+        <mxCell id="mK63LABdQIUOHuwPP6Pl-6" parent="mK63LABdQIUOHuwPP6Pl-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- usuario: Usuario&lt;/div&gt;&lt;div&gt;- pelicula: Pelicula&lt;/div&gt;- tipoAlgoritmo: TipoAlgoritmo&lt;div&gt;- tipoBusqueda: TipoBusqueda&lt;/div&gt;" vertex="1">
           <mxGeometry height="64" width="240" y="26" as="geometry" />
         </mxCell>
         <mxCell id="mK63LABdQIUOHuwPP6Pl-7" parent="mK63LABdQIUOHuwPP6Pl-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
           <mxGeometry height="8" width="240" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-8" parent="mK63LABdQIUOHuwPP6Pl-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ SistemaRecomendador(tipoAlgoritmo: TipoAlgoritmo, tipoBusqueda: TipoBusqueda)&lt;div&gt;+ get&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAlgoritmo():&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAlgoritmo&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ set&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAlgoritmo(&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAlgoritmo): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ set&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoBusqueda(&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoBusqueda): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ get&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoBusqueda():&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoBusqueda&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ generarRecomendacion(usuario: Usuario): Pelicula&lt;/div&gt;&lt;div&gt;+ buscarPelicula(texto: String): Pelicula&lt;/div&gt;" vertex="1">
+        <mxCell id="mK63LABdQIUOHuwPP6Pl-8" parent="mK63LABdQIUOHuwPP6Pl-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Recomendador(tipoAlgoritmo: TipoAlgoritmo, tipoBusqueda: TipoBusqueda)&lt;div&gt;+ get&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAlgoritmo():&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAlgoritmo&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ set&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAlgoritmo(&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoAlgoritmo): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ set&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoBusqueda(&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoBusqueda): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ get&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoBusqueda():&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;TipoBusqueda&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ generarRecomendacion(usuario: Usuario): Pelicula&lt;/div&gt;&lt;div&gt;+ buscarPelicula(texto: String): Pelicula&lt;/div&gt;" vertex="1">
           <mxGeometry height="162" width="240" y="98" as="geometry" />
         </mxCell>
         <mxCell id="mK63LABdQIUOHuwPP6Pl-9" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Usuario&amp;nbsp;" vertex="1">
-          <mxGeometry height="280" width="210" x="-160" y="184" as="geometry" />
+          <mxGeometry height="270" width="240" x="-190" y="199" as="geometry" />
         </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-10" parent="mK63LABdQIUOHuwPP6Pl-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- id: String&lt;/div&gt;&lt;div&gt;- nombre: String&lt;/div&gt;&lt;div&gt;- preferencias: String&lt;/div&gt;- peliculasVistas: Pelicula" vertex="1">
-          <mxGeometry height="64" width="210" y="26" as="geometry" />
+        <mxCell id="mK63LABdQIUOHuwPP6Pl-10" parent="mK63LABdQIUOHuwPP6Pl-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- id: String&lt;/div&gt;&lt;div&gt;- nombre: String&lt;/div&gt;&lt;div&gt;- preferencias: String&lt;/div&gt;- peliculasVistas: Pelicula [0..*]" vertex="1">
+          <mxGeometry height="64" width="240" y="26" as="geometry" />
         </mxCell>
         <mxCell id="mK63LABdQIUOHuwPP6Pl-11" parent="mK63LABdQIUOHuwPP6Pl-9" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
-          <mxGeometry height="8" width="210" y="90" as="geometry" />
+          <mxGeometry height="8" width="240" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-12" parent="mK63LABdQIUOHuwPP6Pl-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ Usuario(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;id: String,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;nombre: String,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;preferencias: String,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;peliculasVistas: Pelicula)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ getId(): String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ setId(String): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;+ getPeliculasVistas(): Pelicula&lt;/div&gt;&lt;div&gt;+ setPeliculasVistas(Pelicula): void&lt;/div&gt;&lt;div&gt;+ calificarPelicula(pelicula: Pelicula, valor: double): void&lt;/div&gt;&lt;div&gt;+ comentarPelicula(pelicula: Pelicula, contenido: String): Comentario&lt;/div&gt;" vertex="1">
-          <mxGeometry height="182" width="210" y="98" as="geometry" />
-        </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-13" edge="1" parent="1" source="mK63LABdQIUOHuwPP6Pl-10" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="mK63LABdQIUOHuwPP6Pl-2" value="">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-30" y="360" as="sourcePoint" />
-            <mxPoint x="130" y="360" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-14" connectable="0" parent="mK63LABdQIUOHuwPP6Pl-13" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" value="0..*" vertex="1">
-          <mxGeometry relative="1" x="-1" as="geometry">
-            <mxPoint x="10" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-15" connectable="0" parent="mK63LABdQIUOHuwPP6Pl-13" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" value="0..*" vertex="1">
-          <mxGeometry relative="1" x="1" as="geometry">
-            <mxPoint x="-10" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-20" connectable="0" parent="mK63LABdQIUOHuwPP6Pl-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="+ califica" vertex="1">
-          <mxGeometry relative="1" x="-0.0439" y="2" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
+        <mxCell id="mK63LABdQIUOHuwPP6Pl-12" parent="mK63LABdQIUOHuwPP6Pl-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ Usuario(&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;id: String,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;nombre: String,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;preferencias: String)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ getId(): String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ setId(String): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;...&lt;/div&gt;&lt;div&gt;+ getPreferencias():&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ setPreferencias(String): void&lt;/div&gt;&lt;div&gt;+ agregarPeliculaVistas(pelicula: Pelicula): void&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ comentarPelicula(pelicula: Pelicula, contenido: String): Comentario&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="172" width="240" y="98" as="geometry" />
         </mxCell>
         <mxCell id="mK63LABdQIUOHuwPP6Pl-16" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Comentario" vertex="1">
-          <mxGeometry height="150" width="160" x="80" y="-40" as="geometry" />
+          <mxGeometry height="260" width="180" x="50" y="-110" as="geometry" />
         </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-17" parent="mK63LABdQIUOHuwPP6Pl-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- id: String&lt;/div&gt;- enunciado: String&lt;div&gt;- autor: Usuario&lt;/div&gt;" vertex="1">
-          <mxGeometry height="54" width="160" y="26" as="geometry" />
+        <mxCell id="mK63LABdQIUOHuwPP6Pl-17" parent="mK63LABdQIUOHuwPP6Pl-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- id: String&lt;/div&gt;- enunciado: String&lt;div&gt;- calificacion: double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="54" width="180" y="26" as="geometry" />
         </mxCell>
         <mxCell id="mK63LABdQIUOHuwPP6Pl-18" parent="mK63LABdQIUOHuwPP6Pl-16" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
-          <mxGeometry height="8" width="160" y="80" as="geometry" />
+          <mxGeometry height="8" width="180" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="mK63LABdQIUOHuwPP6Pl-19" parent="mK63LABdQIUOHuwPP6Pl-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Comentario(id: String, enunciado: String, autor: Usuario)" vertex="1">
-          <mxGeometry height="62" width="160" y="88" as="geometry" />
+        <mxCell id="mK63LABdQIUOHuwPP6Pl-19" parent="mK63LABdQIUOHuwPP6Pl-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Comentario(id: String, enunciado: String, autor: Usuario, calificacion: double)&lt;div&gt;+ getId(): String&lt;/div&gt;&lt;div&gt;+ setId(String): void&lt;/div&gt;&lt;div&gt;+ getEnunciado():&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ setEnunciado(String): void&lt;/div&gt;&lt;div&gt;+ getCalificacion(): double&lt;/div&gt;&lt;div&gt;+ setCalificacion(double): void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="172" width="180" y="88" as="geometry" />
         </mxCell>
         <mxCell id="mK63LABdQIUOHuwPP6Pl-25" edge="1" parent="1" source="mK63LABdQIUOHuwPP6Pl-10" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0;entryY=0.94;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.938;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
           <mxGeometry relative="1" as="geometry">
@@ -110,7 +89,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mK63LABdQIUOHuwPP6Pl-31" connectable="0" parent="mK63LABdQIUOHuwPP6Pl-29" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" value="0..*" vertex="1">
-          <mxGeometry relative="1" x="1" as="geometry" />
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-10" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="mK63LABdQIUOHuwPP6Pl-32" connectable="0" parent="mK63LABdQIUOHuwPP6Pl-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="+ comenta" vertex="1">
           <mxGeometry relative="1" x="-0.2744" y="-1" as="geometry">
@@ -124,7 +105,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mK63LABdQIUOHuwPP6Pl-34" connectable="0" parent="mK63LABdQIUOHuwPP6Pl-33" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" value="0..*&amp;nbsp;" vertex="1">
-          <mxGeometry relative="1" x="-1" as="geometry" />
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="mK63LABdQIUOHuwPP6Pl-35" connectable="0" parent="mK63LABdQIUOHuwPP6Pl-33" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" value="1" vertex="1">
           <mxGeometry relative="1" x="1" as="geometry">
@@ -178,6 +161,24 @@
         <mxCell id="mK63LABdQIUOHuwPP6Pl-52" connectable="0" parent="mK63LABdQIUOHuwPP6Pl-50" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" value="1" vertex="1">
           <mxGeometry relative="1" x="1" as="geometry">
             <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5PU7SN-1DX3iMtDltQ-m-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&amp;lt;&amp;lt;main&amp;gt;&amp;gt;&lt;div&gt;SistemaRecomendacion&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="160" x="460" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="5PU7SN-1DX3iMtDltQ-m-2" parent="5PU7SN-1DX3iMtDltQ-m-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&amp;nbsp;" vertex="1">
+          <mxGeometry height="14" width="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5PU7SN-1DX3iMtDltQ-m-3" parent="5PU7SN-1DX3iMtDltQ-m-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="5PU7SN-1DX3iMtDltQ-m-4" parent="5PU7SN-1DX3iMtDltQ-m-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ {static} main(args : String[]) : void" vertex="1">
+          <mxGeometry height="42" width="160" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="5PU7SN-1DX3iMtDltQ-m-5" edge="1" parent="1" source="5PU7SN-1DX3iMtDltQ-m-2" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="mK63LABdQIUOHuwPP6Pl-8" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="640" y="600" as="sourcePoint" />
+            <mxPoint x="800" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>

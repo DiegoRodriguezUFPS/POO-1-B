@@ -22,8 +22,8 @@ public class Reserva {
     }
 
     
-    public Reserva(int duracionEstadia, String serviciosAdicionales, Cuidador cuidador, Mascota mascota) {
-        this.fechaIngreso = LocalDate.now();
+    public Reserva(LocalDate fechaIngreso,int duracionEstadia, String serviciosAdicionales, Cuidador cuidador, Mascota mascota) {
+        this.fechaIngreso = fechaIngreso;
         this.duracionEstadia = duracionEstadia;
         this.serviciosAdicionales = serviciosAdicionales;
         this.cuidador = cuidador;
@@ -87,6 +87,11 @@ public class Reserva {
     public String obtenerFechaIda(){
         String fechaIdaTM = this.fechaIda.toString();
         return fechaIdaTM;
+    }
+    
+    @Override
+    public String toString(){
+        return mascota.getNombre() + " de "+ mascota.getDuenio().getNombre();
     }
     
     

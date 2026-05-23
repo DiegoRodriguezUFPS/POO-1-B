@@ -6,9 +6,11 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import static modelo.AtiendeEsp.ACUATICOS;
+import java.util.Date;
 import modelo.Cuidador;
+import modelo.Especialidad;
 import modelo.Mascota;
 import modelo.Reserva;
 import vista.JFCuidadores;
@@ -25,22 +27,47 @@ public class ControlReserva implements ActionListener {
     Cuidador cuidador;
     JFReserva frmReserva;
     JFCuidadores frmCuidadores;
+    ControlAdministrador cntrlAdministrador;
 
     public ControlReserva() {
     }
 
-    public ControlReserva(ArrayList<Mascota> ListaMascota, JFReserva frmReserva, JFCuidadores frmCuidadores) {
+    public ControlReserva(ArrayList<Reserva> ListaReserva, ArrayList<Mascota> ListaMascota, JFReserva frmReserva, JFCuidadores frmCuidadores, ControlAdministrador cntrlAdministrador) {
         this.ListaMascota = ListaMascota;
-        this.ListaReserva = new ArrayList<>();
+        this.ListaReserva = ListaReserva;
         this.cuidador = new Cuidador();
         this.cuidador.crearListaCuidador();
         this.frmReserva = frmReserva;
         this.frmCuidadores = frmCuidadores;
+        this.cntrlAdministrador = cntrlAdministrador;
 
         this.frmReserva.btnGuardarReserva.addActionListener(this);
         this.frmReserva.btnMostarCuidador.addActionListener(this);
+        this.frmReserva.comBMascota.addActionListener(this);
         refrescarDatosCuidadores();
 
+    }
+
+    public String especialidadToString(Especialidad especilidadTM) {
+        String especialidad = "";
+        switch (especilidadTM) {
+            case ACUATICOS:
+                especialidad = "Acuaticos";
+                break;
+            case CANINOS:
+                especialidad = "Caninos";
+                break;
+            case FELINOS:
+                especialidad = "Felinos";
+                break;
+            case ROEDORES:
+                especialidad = "Roedores";
+                break;
+
+            default:
+                throw new AssertionError();
+        }
+        return especialidad;
     }
 
     public void refrescarDatosCuidadores() {
@@ -51,7 +78,6 @@ public class ControlReserva implements ActionListener {
         frmCuidadores.txtNombre.setText("");
 
         for (Cuidador cuidador1 : cuidador.getListaCuaidador()) {
-            frmReserva.comBCuidador.addItem(cuidador1);
             frmCuidadores.txtId.append(cuidador1.getId() + "\n");
             frmCuidadores.txtNombre.append(cuidador1.getNombre() + "\n");
             frmCuidadores.txtNExperiencia.append(cuidador1.getNivExperiencia() + "\n");
@@ -60,24 +86,7 @@ public class ControlReserva implements ActionListener {
             } else {
                 frmCuidadores.txtDisponibilidad.append("No\n");
             }
-            String especialidad = "";
-            switch (cuidador1.getAtiendeEsp()) {
-                case ACUATICOS:
-                    especialidad = "Acuaticos";
-                    break;
-                case CANINOS:
-                    especialidad = "Caninos";
-                    break;
-                case FELINOS:
-                    especialidad = "Felinos";
-                    break;
-                case ROEDORES:
-                    especialidad = "Roedores";
-                    break;
-
-                default:
-                    throw new AssertionError();
-            }
+            String especialidad = especialidadToString(cuidador1.getEspecialidad());
             frmCuidadores.txtEspecialidad.append(especialidad + "\n");
         }
     }
@@ -99,15 +108,45 @@ public class ControlReserva implements ActionListener {
 
     public void guardarReserva() {
         Mascota mascota = (Mascota) frmReserva.comBMascota.getSelectedItem();
-        String serviciosad = frmReserva.txtAServicios.getText();
-        Cuidador cuidador = (Cuidador) frmReserva.comBCuidador.getSelectedItem();
-        cuidador.setEstaDisponible(false);
-        int diasEstadia = (int) frmReserva.SpinnerDias.getValue();
-        Reserva reservaTM = new Reserva(diasEstadia, serviciosad, cuidador, mascota);
-        ListaReserva.add(reservaTM);
-        mostrar();
-        refrescarDatosCuidadores();
+        if (mascota != null && frmReserva.jDateChooser.getDate() != null) {
+            Date fechaIngresoDate = frmReserva.jDateChooser.getDate();
+            LocalDate fechaIngresoLocalDate = fechaIngresoDate.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDate();
 
+            String serviciosad = frmReserva.txtAServicios.getText();
+
+            Cuidador cuidadorTM = new Cuidador();
+            for (Cuidador cuidadorFor : cuidador.getListaCuaidador()) {
+                if (frmReserva.txtCuidador.getText().equals(cuidadorFor.getNombre())) {
+                    cuidadorTM = cuidadorFor;
+                    break;
+                }
+            }
+
+            cuidadorTM.setEstaDisponible(false);
+            int diasEstadia = (int) frmReserva.SpinnerDias.getValue();
+            Reserva reservaTM = new Reserva(fechaIngresoLocalDate, diasEstadia, serviciosad, cuidadorTM, mascota);
+            ListaReserva.add(reservaTM);
+            mostrar();
+            refrescarDatosCuidadores();
+            seleccionarCuidador();
+            cntrlAdministrador.refrescarComBReserva();
+        } else {
+            frmReserva.txtAMostrar.setText("Rellene todos los datos correctamente");
+        }
+
+    }
+
+    public void seleccionarCuidador() {
+        Mascota mascota = (Mascota) frmReserva.comBMascota.getSelectedItem();
+        if (!(mascota == null)) {
+            for (Cuidador cuidadorTM : cuidador.getListaCuaidador()) {
+                if (mascota.getRaza().equalsIgnoreCase(especialidadToString(cuidadorTM.getEspecialidad())) && cuidadorTM.isEstaDisponible()) {
+                    frmReserva.txtCuidador.setText(cuidadorTM.toString());
+                    break;
+                }
+
+            }
+        }
     }
 
     public void mostrarListaCuidador() {
@@ -122,6 +161,10 @@ public class ControlReserva implements ActionListener {
 
         if (e.getSource() == frmReserva.btnMostarCuidador) {
             mostrarListaCuidador();
+        }
+
+        if (e.getSource() == frmReserva.comBMascota) {
+            seleccionarCuidador();
         }
     }
 
