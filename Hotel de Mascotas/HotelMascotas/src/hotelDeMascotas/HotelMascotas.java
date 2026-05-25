@@ -14,6 +14,7 @@ import vista.JFAdministrador;
 import vista.JFCuidadores;
 import vista.JFRegistrar;
 import vista.JFReserva;
+
 /**
  *
  * @author roca
@@ -26,21 +27,19 @@ public class HotelMascotas {
     public static void main(String[] args) {
         ArrayList<Mascota> ListaMascotasTodos = new ArrayList<>();
         ArrayList<Reserva> ListaReserva = new ArrayList<>();
-        JFReserva frmReserva = new JFReserva();        
-        
+        JFReserva frmReserva = new JFReserva();
+
         JFAdministrador frmAdministrador = new JFAdministrador();
         ControlAdministrador cntrlAdministrador = new ControlAdministrador(frmAdministrador, ListaReserva);
-        
+
         JFCuidadores frmCuidadores = new JFCuidadores();
         ControlReserva cntrlReserva = new ControlReserva(ListaReserva, ListaMascotasTodos, frmReserva, frmCuidadores, cntrlAdministrador);
-        
+
         JFRegistrar frmRegistrar = new JFRegistrar();
         ControlRegistrar cntrlRegistrar = new ControlRegistrar(frmRegistrar, ListaMascotasTodos, cntrlReserva);
-        
+
         frmReserva.setVisible(true);
         frmRegistrar.setVisible(true);
         frmAdministrador.setVisible(true);
-        
     }
-    
 }

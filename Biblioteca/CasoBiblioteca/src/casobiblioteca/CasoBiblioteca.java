@@ -24,6 +24,7 @@ public class CasoBiblioteca {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         ArrayList<Usuario> ListaUsuario = new ArrayList<>();
         ArrayList<Prestamo> ListaPrestamo = new ArrayList<>();
         
