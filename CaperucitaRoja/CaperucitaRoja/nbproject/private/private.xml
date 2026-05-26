@@ -2,6 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/vista/JFInterfaz.java</file>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/vista/JFDatos.java</file>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/controlador/controladorVista.java</file>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/CaperucitaRoja/CaperucitaRoja.java</file>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/controlador/controladorCesta.java</file>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/imagen/Abuelita.png</file>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/modelo/Abuela.java</file>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/vista/JFCesta.java</file>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/imagen/Casa.png</file>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/modelo/Cesta.java</file>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/modelo/Objeto.java</file>
+            <file>file:/C:/Users/roca/Documents/POO/CaperucitaRoja/CaperucitaRoja/src/modelo/Tipo.java</file>
+        </group>
     </open-files>
 </project-private>
