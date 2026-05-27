@@ -72,8 +72,8 @@ public class controladorVista implements ActionListener {
         frmInterfaz.TextArea1.append("Para continuar dale a siguiente.");
     }
     
-    private void configurarCombos(boolean caper, boolean lobo, boolean abuela, boolean lenador) {
-        frmInterfaz.ComboCaperucita.setEnabled(caper);
+    private void configurarCombos(boolean caperucita ,boolean lobo, boolean abuela, boolean lenador) {
+        frmInterfaz.ComboCaperucita.setEnabled(caperucita);
         frmInterfaz.ComboLobo.setEnabled(lobo);
         frmInterfaz.ComboAbuela.setEnabled(abuela);
         frmInterfaz.ComboLeñador.setEnabled(lenador);

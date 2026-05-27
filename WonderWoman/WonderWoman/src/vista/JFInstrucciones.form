@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="3"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Instrucciones">
+              <Font PropertyName="font" name="Georgia" size="12" style="0"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <Component id="jTextField1" min="-2" pref="359" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="46" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
+                  <Component id="btnComenzar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                  <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" pref="329" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btnComenzar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextArea1">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="lineWrap" type="boolean" value="true"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="&#xa1;Hola, Jugador! Aqu&#xed; se dar&#xe1; una breve explicaci&#xf3;n sobre el juego y como debe jugarse. Este juego pertenece a la categor&#xed;a de &quot;Idle Games&quot; donde el &#xfa;nico control es el mouse y su &#xfa;nica acci&#xf3;n la de dar clicks. Para entender como jugar necesitas saber que:&#xa;&#xa;La Interfaz del Juego:&#xa;&#x25b6; Estad&#xed;sticas de Wonder Woman: En pantalla ver&#xe1;s tu Vida actual/m&#xe1;xima y tu Nivel (que define tu da&#xf1;o base).&#xa;&#x25b6; Zona de Batalla: Muestra cu&#xe1;ntos soldados quedan en la oleada y la vida del enemigo que tienes en frente.&#xa;&#x25b6; Panel de Control: Los botones con los que interact&#xfa;as para atacar, curarte o probar tu suerte.&#xa;&#xa;Mec&#xe1;nicas Principales:&#xa;&#x25b6; El Sistema de Puntos: Cada vez que atacas a un enemigo, ganas puntos equivalentes al nivel de da&#xf1;o de Diana. Estos puntos son tu moneda de cambio para comprar ventajas. &#xa1;&#xda;salos con cabeza!&#xa;&#x25b6; Combate: Te enfrentar&#xe1;s a una oleada de 4 Soldados que van subiendo de nivel y se vuelven m&#xe1;s hostiles. &#xa1;Cuidado! Si no matas al soldado de un golpe, este podr&#xe1; contraatacarar y reducir&#xe1; tu vida.&#xa;&#x25b6; Las Ruletas: Existen 2 tipos:&#xa;   1. Ruleta de Equipo (100 puntos): Te otorga un objeto mitol&#xf3;gico al azar. Estos objetos te dar&#xe1;n diferentes mejoras.&#xa;   2. Ruleta de Habilidad (200 puntos): Te permite conseguir un poder especial que cambia tu estilo de juego.&#xa;&#x25b6; Uso de Curaci&#xf3;n y Habilidad: &#xa;   1.Curaci&#xf3;n (50 puntos): Si tu vida est&#xe1; baja, gasta 50 puntos para recuperar 40 de vida instant&#xe1;neamente.&#xa;   2. Activar Habilidad: Presiona este bot&#xf3;n para que tu siguiente ataque aplique el efecto especial de la habilidad que  &#xa;   tengas equipada en ese momento.&#xa;&#xa;Ganas si logras derrotar a todos los enemigos y Pierdes si tu vida llega a 0.&#xa;&#xbf;Est&#xe1;s preparado para embarcarte a la aventura?"/>
+                <Property name="wrapStyleWord" type="boolean" value="true"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JTextField" name="jTextField1">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Georgia" size="14" style="0"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#xa1;Bienvenido al WonderWoman Game! "/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnComenzar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Comenzar"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
