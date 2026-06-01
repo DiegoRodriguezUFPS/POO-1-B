@@ -28,5 +28,5 @@ public class Vecindad {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
+    
 }
