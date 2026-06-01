@@ -37,6 +37,10 @@ public class JFVecindad2 extends javax.swing.JFrame {
         btnBarriga = new javax.swing.JButton();
         btnBarriga.setOpaque(false);          // Quita el fondo opaco
         btnBarriga.setContentAreaFilled(false); // Quita el relleno de color
+        lblMunieca = new javax.swing.JLabel();
+        btnMunieca = new javax.swing.JButton();
+        btnMunieca.setOpaque(false);          // Quita el fondo opaco
+        btnMunieca.setContentAreaFilled(false); // Quita el relleno de color
         lblPopis = new javax.swing.JLabel();
         btnPopis = new javax.swing.JButton();
         btnPopis.setOpaque(false);          // Quita el fondo opaco
@@ -55,6 +59,10 @@ public class JFVecindad2 extends javax.swing.JFrame {
         lblBarriga.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Barriga.png")).getImage().getScaledInstance(120, 150, java.awt.Image.SCALE_SMOOTH)));
         jLayeredPane2.add(lblBarriga, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 120, 150));
         jLayeredPane2.add(btnBarriga, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 160, 170));
+
+        lblMunieca.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Munieca.png")).getImage().getScaledInstance(80, 80, java.awt.Image.SCALE_SMOOTH)));
+        jLayeredPane2.add(lblMunieca, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, 80, 80));
+        jLayeredPane2.add(btnMunieca, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 90, 90));
 
         lblPopis.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Popis.png")).getImage().getScaledInstance(90, 150, java.awt.Image.SCALE_SMOOTH)));
         jLayeredPane2.add(lblPopis, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 90, 150));
@@ -96,11 +104,13 @@ public class JFVecindad2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnBarriga;
     public javax.swing.JButton btnFlechaDerecha;
+    public javax.swing.JButton btnMunieca;
     public javax.swing.JButton btnPopis;
     private javax.swing.JLayeredPane jLayeredPane2;
     public javax.swing.JLabel lblBarriga;
     public javax.swing.JLabel lblFlechaIzquierda;
     public javax.swing.JLabel lblFondoVencidad;
+    public javax.swing.JLabel lblMunieca;
     public javax.swing.JLabel lblPopis;
     // End of variables declaration//GEN-END:variables
 }

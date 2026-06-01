@@ -4,13 +4,15 @@ public class Vecindad {
 
     private String nombre;
     private String descripcion;
+    private String fotoRuta;
 
     public Vecindad() {
     }
 
-    public Vecindad(String nombre, String descripcion) {
+    public Vecindad(String nombre, String descripcion, String fotoRuta) {
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.fotoRuta = fotoRuta;
     }
 
     public String getNombre() {
@@ -28,5 +30,14 @@ public class Vecindad {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public String getFotoRuta() {
+        return fotoRuta;
+    }
+
+    public void setFotoRuta(String fotoRuta) {
+        this.fotoRuta = fotoRuta;
+    }
+    
     
 }

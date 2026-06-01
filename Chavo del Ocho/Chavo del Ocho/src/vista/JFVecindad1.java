@@ -38,6 +38,10 @@ public class JFVecindad1 extends javax.swing.JFrame {
         btnFlorindaYRamon = new javax.swing.JButton();
         btnFlorindaYRamon.setOpaque(false);          // Quita el fondo opaco
         btnFlorindaYRamon.setContentAreaFilled(false); // Quita el relleno de color
+        lblPelota = new javax.swing.JLabel();
+        btnPelota = new javax.swing.JButton();
+        btnPelota.setOpaque(false);          // Quita el fondo opaco
+        btnPelota.setContentAreaFilled(false); // Quita el relleno de color
         lblChilindrina = new javax.swing.JLabel();
         lblQuico = new javax.swing.JLabel();
         btnQuicoYChilindrina = new javax.swing.JButton();
@@ -60,6 +64,10 @@ public class JFVecindad1 extends javax.swing.JFrame {
         lblRamon.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/RamonEnojado.png")).getImage().getScaledInstance(90, 150, java.awt.Image.SCALE_SMOOTH)));
         jLayeredPane2.add(lblRamon, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 90, 150));
         jLayeredPane2.add(btnFlorindaYRamon, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 240, 170));
+
+        lblPelota.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Pelota.png")).getImage().getScaledInstance(90, 80, java.awt.Image.SCALE_SMOOTH)));
+        jLayeredPane2.add(lblPelota, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 90, 80));
+        jLayeredPane2.add(btnPelota, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 100, 80));
 
         lblChilindrina.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ChilindrinaEnojada.png")).getImage().getScaledInstance(90, 150, java.awt.Image.SCALE_SMOOTH)));
         jLayeredPane2.add(lblChilindrina, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 90, 150));
@@ -104,12 +112,14 @@ public class JFVecindad1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnFlechaDerecha;
     public javax.swing.JButton btnFlorindaYRamon;
+    public javax.swing.JButton btnPelota;
     public javax.swing.JButton btnQuicoYChilindrina;
     private javax.swing.JLayeredPane jLayeredPane2;
     public javax.swing.JLabel lblChilindrina;
     public javax.swing.JLabel lblFlechaDerecha;
     public javax.swing.JLabel lblFlorinda;
     public javax.swing.JLabel lblFondoVencidad;
+    public javax.swing.JLabel lblPelota;
     public javax.swing.JLabel lblQuico;
     public javax.swing.JLabel lblRamon;
     // End of variables declaration//GEN-END:variables
