@@ -8,7 +8,5 @@ dist/
 **/nbproject/private/
 **/nbproject/private/*
 
-*.zip
-
 # Excepción para que sí suba el JCalendar
 !**/libs/**/*.jar
